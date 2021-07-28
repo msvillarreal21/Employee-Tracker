@@ -1,7 +1,7 @@
 const db = require('./db/connection');
 const express = require ('express');
 const apiRoutes = require('./routes/apiRoutes');
-const inquirer = require('inquirer');
+const {startApp} = require('./'); //add route to start inquirer/console.table
 
 
 
@@ -29,3 +29,5 @@ app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 
 });
+
+startApp();
