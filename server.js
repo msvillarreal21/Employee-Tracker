@@ -1,7 +1,7 @@
 const db = require('./db/connection');
 const express = require ('express');
-const apiRoutes = require('./routes/apiRoutes');
-const {startApp} = require('./'); //add route to start inquirer/console.table
+const Routes = require('./routes');
+const {startApp} = require('./runApp'); //add route to start inquirer/console.table
 
 
 
@@ -11,7 +11,7 @@ const app = express ();
 //express middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use('/api', apiRoutes);
+app.use('/api', Routes);
 
 
 //Default response for any other request (Not Found)
@@ -22,9 +22,9 @@ app.use((req, res) => {
 //connect the server after DB connection
 db.connect(err => {
   if (err) throw err;
-  console.log('Database connected.');
-
 })
+
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 

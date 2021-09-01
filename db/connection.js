@@ -1,4 +1,5 @@
 const mysql = require('mysql2');
+require('dotenv').config();
 
 //connect to database
 const db = mysql.createConnection (
@@ -8,7 +9,7 @@ const db = mysql.createConnection (
         user: 'root',
         //Your Mysql password,
         password: 'A1P12J2021!',
-        database: 'challange'
+        database: 'challenge'
     },
     console.log('Connected to the challenge database.')
 );

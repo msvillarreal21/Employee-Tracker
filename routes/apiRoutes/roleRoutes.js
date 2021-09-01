@@ -1,8 +1,7 @@
 const express = require('express');
-const { restoreDefaultPrompts } = require('inquirer');
 const router = express.Router();
-const db = require('../../db/connection');
-const inputCheck = require('../../utils/inputCheck');
+const db = require('./../../db/connection');
+
 
 
 //create a route to get all roles

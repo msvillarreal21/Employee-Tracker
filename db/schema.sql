@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS departments;
 DROP TABLE IF EXISTS roles;
 DROP TABLE IF EXISTS employees;
 
--- USE challenge
+USE challenge
 
 
 CREATE TABLE departments (
