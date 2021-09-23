@@ -28,7 +28,7 @@ const header = () => {
     console.log(``);
     console.log(chalk.yellowBright.bold(figlet.textSync('Employee Tracker')));
     console.log(``);
-    console.log(`                                                            ` + chalk.magenta.bold('Created By: Fizza Zaidi'));
+    console.log(`                                                            ` + chalk.magenta.bold('Created By: Maria Villarreal'));
     console.log(``);
     console.log(chalk.magenta.bold(`====================================================================================`));
     console.log(chalk.yellowBright.bold(`************************************************************************************`));
