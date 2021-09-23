@@ -29,10 +29,10 @@ class Department {
             if (err) throw err;});
       }
      
-    DeleteDepartment(connection,Name) 
+    DeleteDepartment(connection, Name) 
      {
       let sqlQuery= `DELETE FROM DEPARTMENT WHERE name=?`;
-      connection.query(sqlQuery,name,(err,res)=>
+      connection.query(sqlQuery,Name,(err,res)=>
       {
         if (err) throw err;
       })
