@@ -2,7 +2,7 @@ const mysql = require('mysql2');
 require('dotenv').config();
 
 //connect to database
-const db = mysql.createConnection (
+const connection = mysql.createConnection (
     {
         host:'localhost',
         //Your Mysql username,
@@ -14,4 +14,4 @@ const db = mysql.createConnection (
     console.log('Connected to the challenge database.')
 );
 
-module.exports = db;
+module.exports = connection;

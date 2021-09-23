@@ -6,27 +6,27 @@ CREATE DATABASE challenge;
 USE challenge;
 
 /* CREATE TABLE FOR DEPARTMENTS*/
-CREATE TABLE departments (
+CREATE TABLE department (
     id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    dept_name VARCHAR(30) NOT NULL
+    name VARCHAR(30) NOT NULL
 );
 
 /* CREATE TABLE FOR ROLES*/
-CREATE TABLE roles (
+CREATE TABLE role (
     id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
     title VARCHAR(30) NOT NULL,
     salary DECIMAL (10,2) NOT NULL,
     department_id INTEGER NOT NULL,
-    FOREIGN KEY (departments_id) REFERENCES departments(id)
+    FOREIGN KEY (department_id) REFERENCES department(id)
 ); 
 
 /* CREATE TABLE FOR EMPLOYEES*/
-CREATE TABLE employees (
+CREATE TABLE employee (
     id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
     role_id INTEGER NOT NULL,
     manager_id INTEGER,
-    FOREIGN KEY (roles_id) REFERENCES roles(id),
-    FOREIGN KEY (manager_id) REFERENCES employees(id) 
+    FOREIGN KEY (role_id) REFERENCES role(id),
+    FOREIGN KEY (manager_id) REFERENCES employee(id) 
 );
